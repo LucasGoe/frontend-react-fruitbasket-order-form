@@ -1,0 +1,76 @@
+body {
+    background-color: yellowgreen;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+fieldset {
+    background-color: ghostwhite;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 470px;
+}
+
+logo {
+    width: 100px;
+}
+
+article {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+    margin: 20px;
+}
+
+button {
+    height: 25px;
+    margin: 5px;
+}
+
+.reset-button {
+    border-radius: 5px;
+    width: 420px;
+    height: 50px;
+    padding: 10px;
+    margin: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: green;
+    font-family: 'Pacifico', cursive;
+
+}
+h2 {
+    margin: 5px;
+}
+
+p {
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+input {
+    margin: 5px;
+    margin-bottom: 20px;
+
+}
