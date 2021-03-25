@@ -2,16 +2,15 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 import Product from "./components/Product";
 import ResetButton from "./components/ResetButton";
+import Button from "./components/Button";
 import './App.css';
 
 function App() {
-    // const [counter, setCounter] = React.useState(0);
     const [strawberryCounter, setStrawberryCounter] = React.useState(0);
     const [bananaCounter, setBananaCounter] = React.useState(0);
     const [appleCounter, setAppleCounter] = React.useState(0);
     const [kiwiCounter, setKiwiCounter] = React.useState(0);
 
-    // Hier komt destructure van useForm
     const {register, handleSubmit, errors, watch} = useForm();
 
     const alternativeField = watch('frequency');
@@ -26,11 +25,6 @@ function App() {
         ${kiwiCounter} kiwi's
         `)
     }
-
-    // console.log(watch("firstName"));
-    // watch input value by passing the name of it
-
-    // const selectedReferrer = watch('found-through');
 
     function resetAll() {
         setStrawberryCounter(0);
@@ -123,6 +117,7 @@ function App() {
                         <input
                             type="text"
                             name="postalCode"
+                            placeholder="1234AB"
                             ref={register({required: true, maxLength: 6})}
                         />
 
@@ -201,6 +196,7 @@ function App() {
                             >
                             </textarea>
                         </label>
+
                         <label htmlFor="terms-and-conditions">
                             <input
                                 type="checkbox"
@@ -211,11 +207,11 @@ function App() {
 
                             Ik ga akkoord met de algemene voorwaarden
                         </label>
-                        <button
+
+                        <Button
                             type="submit"
-                        >
-                            Verzend
-                        </button>
+                            title="Verzend"
+                        />
                     </form>
                 </div>
             </fieldset>
